@@ -1,0 +1,29 @@
+<html lang="en">
+	<head>
+		{{>headerlinks}}
+	</head>
+	<body>
+		<!-- Navbar code -->
+		{{>navbar}}
+		<!-- Main body code -->
+		<section class="container-fluid main-container">
+			<div class="row">
+				<div class="col-md-12 mx-auto">
+					<div class="row">
+						<div class="col-md-12 main-container__left align-items-center">
+							<figure class="err-img">
+								<img src="images/404.png" alt="about" class="img-fluid" />
+							</figure>
+							<h1>Welcome to <span class="key-text">BoundryXWeather</span></h1>
+							<p>{{errMessage}}</p>
+							<a href="/"><button>Go Back</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- footer code -->
+		{{>footer}}
+	</body>
+</html>

@@ -1,0 +1,258 @@
+// Css reset
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--main-bg: #1b1b1b;
+	--main-color: #6eabf4;
+}
+
+::placeholder {
+	color: #b3b3b3;
+	font-size: 1.6rem;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+// Navbar styling
+.navbar-container {
+	background-color: var(--main-bg);
+	padding: 1rem 0;
+
+	.row {
+		background-color: var(--main-bg);
+	}
+
+	a {
+		font-size: 2rem;
+		color: #ffffff;
+		&:hover {
+			color: var(--main-color);
+		}
+	}
+
+	.fa-snowflake {
+		transition: all linear;
+		animation: rot 2s linear infinite;
+	}
+
+	@keyframes rot {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+}
+
+// Main body styling
+
+.main-container {
+	&__left {
+		height: 50rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		h1 {
+			font-size: 3.5rem;
+		}
+
+		p {
+			font-size: 2rem;
+		}
+
+		.key-text {
+			color: var(--main-color);
+		}
+
+		button {
+			border: none;
+			outline: none;
+			font-size: 1.5rem;
+			padding: 1rem 2rem;
+			border-radius: 1rem;
+			box-shadow: 0px 7px 5px -5px #000000;
+			transition: all 0.2s linear;
+
+			&:hover {
+				box-shadow: 0px 7px 5px -5px var(--main-color);
+			}
+		}
+	}
+
+	&__right {
+		height: 50rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+}
+
+// Weather page styling
+.search-container {
+	display: flex;
+	justify-content: center;
+
+	.search-form {
+		width: 60%;
+		margin: 2rem 0;
+		display: flex;
+		justify-content: center;
+
+		input[type="text"] {
+			width: 80%;
+			height: 4rem;
+			outline: none;
+			border: none;
+			background-color: var(--main-bg);
+			color: #ffffff;
+			font-size: 1.8rem;
+			padding: 0 1rem 0 2rem;
+			border-radius: 4rem 0 0 4rem;
+		}
+
+		input[type="submit"] {
+			width: 20%;
+			height: 4rem;
+			outline: none;
+			border: none;
+			background-color: var(--main-color);
+			font-size: 1.8rem;
+			color: #ffffff;
+			border-radius: 0 4rem 4rem 0;
+			transition: all 0.3s linear;
+
+			&:hover {
+				background-color: #ffffff;
+				color: var(--main-color);
+				border-top: 2px solid var(--main-color);
+				border-right: 2px solid var(--main-color);
+				border-bottom: 2px solid var(--main-color);
+			}
+		}
+	}
+}
+
+.not-found div {
+	width: 60%;
+	height: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.2rem;
+
+	.x-icon {
+		cursor: pointer;
+	}
+}
+
+.main-container .card {
+	background: linear-gradient(
+		39deg,
+		rgba(0, 0, 0, 1) 27%,
+		rgba(73, 73, 73, 1) 100%
+	);
+	color: #ffffff;
+	border-radius: 1rem;
+	width: 50%;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+
+	.upper-layer {
+		display: flex;
+		justify-content: space-between;
+
+		p {
+			font-size: 1.6rem;
+			padding: 0 0.5rem;
+			border-radius: 0.3rem;
+		}
+
+		.location {
+			background-color: #282626;
+		}
+	}
+
+	.middle-layer {
+		height: 20rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		i {
+			font-size: 10rem;
+		}
+	}
+
+	.lower-layer {
+		display: flex;
+		justify-content: space-between;
+
+		&__left {
+			& > div {
+				width: 10rem;
+				display: flex;
+				justify-content: space-between;
+
+				p {
+					width: 6rem;
+					font-size: 1.2rem;
+					font-weight: 500;
+				}
+
+				i {
+					width: 4rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		&__right {
+			margin: auto 0;
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+}
+
+// Hide class
+.main-container .hide {
+	display: none;
+}
+
+// Error styling
+.err-img {
+	height: 30rem;
+	width: 30rem;
+}
+
+// Footer styling
+footer {
+	text-align: center;
+	background-color: var(--main-bg);
+	margin-top: auto;
+
+	p {
+		margin: 0;
+		font-size: 1.5rem;
+		color: #ffffff;
+		line-height: 5rem;
+	}
+}
